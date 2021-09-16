@@ -8,6 +8,7 @@
 - [4. Considerações gerais](#4-considerações-gerais)
 - [5. Critérios de aceitação mínimos do projeto](#5-critérios-de-aceitação-mínimos-do-projeto)
 - [6. Pistas, tips e leituras complementares](#6-pistas-tips-e-leituras-complementares)
+- [7. Hacker edition](#7-hacker-edition)
 
 ---
 
@@ -169,27 +170,6 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 ### JavaScript
 
-- [ ] **Testes unitários**
-
-    <details><summary>Links</summary><p>
-
-  - [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
-  </p></details>
-
-- [ ] **Testes assíncronos**
-
-    <details><summary>Links</summary><p>
-
-  - [Testando Código Assíncrono - Documentação oficial](https://jestjs.io/docs/pt-BR/asynchronous)
-  </p></details>
-
-- [ ] **Mocking**
-
-    <details><summary>Links</summary><p>
-
-  - [Simulações Manuais - Documentação oficial](https://jestjs.io/docs/pt-BR/manual-mocks)
-  </p></details>
-
 - [ ] **Uso ES modules**
 
     <details><summary>Links</summary><p>
@@ -201,6 +181,14 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 - [ ] **Uso de linter (ESLINT)**
 
 - [ ] **Uso de identificadores descritivos (Nomenclatura | Semântica)**
+
+- [ ] **Testes unitários (hacker edition)**
+
+    <details><summary>Links</summary><p>
+
+  - [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
+  </p></details>
+
 
 ### Git e GitHub
 
@@ -351,9 +339,6 @@ O aplicativo deve fazer uso de `npm-scripts` e ter scripts `start`, `test`,
 `build` e `deploy`, que são responsáveis por inicializar, rodar os testes,
 empacotar e fazer deploy do aplicativo, respectivamente.
 
-Os testes unitários devem cobrir um mínimo de 90% de _statements_, _functions_,
-_lines_ e _branches_.
-
 Por outro lado, vocês devem definir a estrutura das pastas e arquivos que considerem
 necessários. Você pode estruturá-los de acordo com as convenções do _framework_ escolhido.
 Portanto, os _testes_ e os _setups_ necessários para executá-los
@@ -386,7 +371,6 @@ O que deve acontecer para satisfazer as necessidades do usuário?
 O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 - Você deve ter recebido _code review_ de pelo menos uma parceira.
-- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
 - Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
 - Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
@@ -414,7 +398,6 @@ O que deve acontecer para satisfazer as necessidades do usuário?
 O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 - Você deve ter recebido _code review_ de pelo menos uma parceira.
-- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
 - Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
 - Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
@@ -436,7 +419,6 @@ está pronto para ser entregue ao cliente.
 ##### Definição de pronto
 
 - Você deve ter recebido _code review_ de pelo menos uma parceira.
-- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
 - Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
 - Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
@@ -455,7 +437,6 @@ rapidamente aos clientes.
 ##### Definição de pronto
 
 - Você deve ter recebido _code review_ de pelo menos uma parceira.
-- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
 - Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
 - Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 - Os dados devem ser mantidos intactos, mesmo depois que um pedido for
@@ -578,3 +559,21 @@ rapidamente aos clientes.
   - [Netlify (vídeo)](https://drive.google.com/file/d/1hzlB8dl4m0OnLLY2-WpjSLcU7eYTURRk/view)
   - [Heroku (vídeo)](https://drive.google.com/file/d/1eqx6yuwJnAU-R83ta89tgEem7ABZigNG/view)
   - [Vercel (vídeo)](https://drive.google.com/file/d/1Q9q1iVnRrWeEhGRns0r5OOeiqloQug8y/view)
+
+
+## 7. Hacker edition
+
+Nesse projeto teremos a tarefa de testar (ao menos) os componentes mais básicos que foram criados. É comum que ao longo do projeto os componentes mais básicos sejam algo como:
+- botões
+- inputs de formulário (e formulários)
+- cards
+- listas
+- header
+- footer
+
+Esses testes vão seguir uma linha parecida dos testes que já foram vistos até então. Podemos testar cada um desses componentes de forma isolada e unitariamente!
+
+O próprio `create-react-app` já traz algumas bibliotecas que auxiliam nessa tarefa como:
+- `@testing-library/react`: para simulação do DOM e renderização dos componentes "em tela";
+- `@testing-library/user-event`: para simular eventos (como `click`, `keypress`, `change`).
+
