@@ -1,8 +1,14 @@
+import Cadastro from "./pages/Cadastro";
+import Login from "./pages/login";
+import Cozinha from "./pages/cozinha";
+import Salao from "./pages/salão";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    // < Cadastro />
+    <Login/>
+    // <Cozinha/>
+    // <Salão/>
   );
 }
 
