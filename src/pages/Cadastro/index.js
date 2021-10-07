@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 import Button from "../../componentes/button/index.js";
 import Input from "../../componentes/input/index.js";
 import "./cadastro.css";
@@ -36,7 +38,7 @@ function Cadastro() {
 
           <Button variant="primary">Cadastrar</Button>
           {/* <Button variant="primary" type="submit" onclick={logar}>Cadastrar</Button> */}
-          <a href="/login">Já tenho cadastro</a>
+          <Link to="/">Já tenho cadastro</Link>
         </form>
       </main>
     </div>

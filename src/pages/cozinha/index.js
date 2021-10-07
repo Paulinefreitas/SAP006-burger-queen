@@ -1,7 +1,7 @@
 function Cozinha() {
     return (
       <div className="Cozinha">
-        <h1>Hello World</h1>
+        <h1>Cozinha em construção</h1>
       </div>
     );
   }
